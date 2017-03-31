@@ -13,8 +13,12 @@
     {:metadata metadata
      :results results}))
 
+;(defn get-contributor-and-description
+;  [get-api "creativeworks/_search" {:page 1}]
+;  (select-keys {} [:description :contributor]))
+;
 
 (defn -main
   [& args]
-  (get-api "creativeworks/_search" {:page 1})
+  (println (get-api "creativeworks/_search" {:page 1}))
   )
