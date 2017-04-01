@@ -23,6 +23,7 @@
 
 (defn -main
   [& args]
+  (println (str "Astronauts in Space and Craft:") )
   (println (get-astros(get-api "/astros.json" {:page 1})))
-  (println (get-long-and-lat(get-api "/iss-now.json" {:page 1})))
+  (println (str "Coordinates of ISS:\n") (get-long-and-lat(get-api "/iss-now.json" {:page 1})))
   )
