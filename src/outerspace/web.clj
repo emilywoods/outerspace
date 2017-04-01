@@ -1,5 +1,5 @@
 (ns clojureweb.web
-  (:require [clojureweb.core :as api]
+  (:require [outerspace.core :as api]
             [compojure.core :refer :all]
             [compojure.handler :refer [site]]
             [hiccup.core :as hiccup]
@@ -23,10 +23,6 @@
      [:div.container
       content]
      ]))
-
-(defn ordered-list
-  [coll]
-  (str coll))
 
 (defn iss-str
   [iss-coords]

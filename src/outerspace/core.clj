@@ -1,4 +1,4 @@
-(ns clojureweb.core
+(ns outerspace.core
   (:gen-class)
   (:require [clj-http.client :as client]
             [cheshire.core :as json]))
