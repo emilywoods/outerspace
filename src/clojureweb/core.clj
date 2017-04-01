@@ -13,13 +13,13 @@
     {:metadata metadata
      :results results}))
 
-(defn get-astros                                            ;astronauts in space
+(defn get-astros
   [response]
   (doseq [k (second (:metadata response))] (prn k)))
 
-(defn get-long-and-lat                                      ;of ISS
+(defn get-long-and-lat
   [response]
-  (vector (get-in response [:metadata 1 :latitude]) (get-in response [:metadata 1 :longitude])))
+  (vector (get-in response [:results 1 :latitude]) (get-in response [:results 1 :longitude])))
 
 (defn -main
   [& args]
@@ -27,3 +27,4 @@
   (println (get-astros(get-api "/astros.json" {:page 1})))
   (println (str "Coordinates of ISS:\n") (get-long-and-lat(get-api "/iss-now.json" {:page 1})))
   )
+
